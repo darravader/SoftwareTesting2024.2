@@ -5,7 +5,6 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "test": "echo \"Error: no tests are implemented yet \" && exit 1"
     "test": "nyc --reporter=lcov --reporter=text-summary mocha"
   },
   "author": "",
