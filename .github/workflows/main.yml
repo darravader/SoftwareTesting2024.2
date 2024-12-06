@@ -1,0 +1,33 @@
+name: Node.js CI
+
+on:
+  push:
+    branches:
+      - main  # Trigger on push to the main branch
+  pull_request:
+    branches:
+      - main  # Trigger on pull request to the main branch
+
+jobs:
+  build:
+    runs-on: ubuntu-latest  # Specify the OS for the job to run on
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2  # Checks out the repository's code
+
+    - name: Set up Node.js
+      uses: actions/setup-node@v2
+      with:
+        node-version: '22'  # Use the Node.js version you have, which is v22.12.0
+
+    - name: Install dependencies
+      run: npm install  # Installs dependencies defined in package.json
+
+    - name: Run tests with coverage
+      run: npm test -- --coverage  # Run tests and collect coverage
+
+    - name: Upload coverage to Coveralls
+      uses: coverallsapp/github-action@v2.3.4
+      with:
+        github-token: ${{ secrets.GITHUB_TOKEN }}  # GitHub token for authentication
