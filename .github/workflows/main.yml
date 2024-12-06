@@ -10,7 +10,7 @@ on:
 
 jobs:
   build:
-    runs-on: ubuntu-latest  # Specify the OS for the job to run on
+    runs-on: windows-latest  # Specify the OS for the job to run on
 
     steps:
     - name: Checkout code
@@ -19,7 +19,7 @@ jobs:
     - name: Set up Node.js
       uses: actions/setup-node@v2
       with:
-        node-version: '22'  # Use the Node.js version you have, which is v22.12.0
+        node-version: '22'  # Use the Node.js version v22.12.0
 
     - name: Install dependencies
       run: npm install  # Installs dependencies defined in package.json
