@@ -3,10 +3,10 @@ name: Node.js CI
 on:
   push:
     branches:
-      - main  # Trigger on push to the main branch
+      - main
   pull_request:
     branches:
-      - main  # Trigger on pull request to the main branch
+      - main
 
 jobs:
   build:
@@ -14,35 +14,34 @@ jobs:
 
     steps:
     - name: Checkout code
-      uses: actions/checkout@v2  # Checks out the repository's code
-
-    - name: Print current directory (for debugging)
-      run: dir  # Prints the current directory contents on Windows
+      uses: actions/checkout@v2
 
     - name: Set up Node.js
       uses: actions/setup-node@v2
       with:
-        node-version: '22'  # Use the Node.js version v22.12.0
+        node-version: '22'
 
-    - name: Change directory to where package.json is located and install dependencies
+    - name: Change directory and install dependencies
       run: |
-        cd project/COMP.SE.200-2024-2025-1  # Navigate to the folder with package.json
-        dir  # List files to confirm we're in the correct directory
-        npm install  # Install dependencies defined in package.json
+        cd project/COMP.SE.200-2024-2025-1
+        npm install
 
     - name: Verify dependencies installed
       run: |
-        cd project/COMP.SE.200-2024-2025-1  # Navigate again to make sure we're in the correct directory
-        dir  # Confirm node_modules exists
-        npm list  # Check that all packages are installed
+        cd project/COMP.SE.200-2024-2025-1
+        npm list
 
     - name: Run tests with coverage
       run: |
-        cd project/COMP.SE.200-2024-2025-1  # Navigate to the folder with package.json
-        npm test -- --coverage  # Run tests and collect coverage
+        cd project/COMP.SE.200-2024-2025-1
+        npm test -- --coverage
+
+    - name: List coverage directory for debugging
+      run: |
+        dir project/COMP.SE.200-2024-2025-1/coverage
 
     - name: Upload coverage to Coveralls
       uses: coverallsapp/github-action@v2.3.4
       with:
-        github-token: ${{ secrets.GITHUB_TOKEN }}  # GitHub token for authentication
-        path-to-lcov: "project/COMP.SE.200-2024-2025-1/coverage/lcov-report/lcov-info"  # Correct path to lcov-info
+        github-token: ${{ secrets.GITHUB_TOKEN }}
+        path-to-lcov: "project/COMP.SE.200-2024-2025-1/coverage/lcov-report/lcov-info"
