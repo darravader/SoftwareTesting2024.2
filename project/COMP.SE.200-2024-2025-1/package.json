@@ -17,7 +17,7 @@
   "nyc": {
     "reporter": ["lcov", "text-summary"],
     "all": true,                            
-    "include": ["src/**/*.js"],             
+    "include": ["project/COMP.SE.200-2024-2025-1/src/**/*.js"],             
     "exclude": ["tests/**/*.test.js"],      
     "coverageDir": "./coverage",           
     "check-coverage": true,                
