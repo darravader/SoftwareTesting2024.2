@@ -30,6 +30,12 @@ jobs:
         dir  # List files to confirm we're in the correct directory
         npm install  # Install dependencies defined in package.json
 
+    - name: Verify dependencies installed
+      run: |
+        cd project/COMP.SE.200-2024-2025-1  # Navigate again to make sure we're in the correct directory
+        dir  # Confirm node_modules exists
+        npm list  # Check that all packages are installed
+
     - name: Run tests with coverage
       run: |
         cd project/COMP.SE.200-2024-2025-1  # Navigate to the folder with package.json

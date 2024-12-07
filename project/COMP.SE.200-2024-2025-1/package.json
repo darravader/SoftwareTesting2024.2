@@ -5,12 +5,16 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "test": "nyc --reporter=lcov --reporter=text-summary mocha"
+    "test": "nyc --reporter=lcov --reporter=text-summary mocha 'tests/**/*.test.js'"
   },
   "author": "",
   "license": "MIT",
   "devDependencies": {
+<<<<<<< HEAD
     "chai": "^5.1.2",
+=======
+    "chai": "^4.3.4",
+>>>>>>> 6d35e0ac8eb6f2f4a0db744684175653f1c272d0
     "mocha": "^10.0.0",
     "nyc": "^15.0.0"
   }
