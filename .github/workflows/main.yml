@@ -44,4 +44,4 @@ jobs:
       uses: coverallsapp/github-action@v2.3.4
       with:
         github-token: ${{ secrets.GITHUB_TOKEN }}
-        path-to-lcov: "project/COMP.SE.200-2024-2025-1/coverage/lcov-report/lcov-info"
+        path-to-lcov: "project/COMP.SE.200-2024-2025-1/coverage/lcov-report/lcov.info"
