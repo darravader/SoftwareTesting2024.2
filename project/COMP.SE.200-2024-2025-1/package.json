@@ -5,7 +5,7 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "test": "nyc --reporter=lcov --reporter=text-summary mocha"
+    "test": "nyc --reporter=lcov --reporter=text-summary mocha 'test/**/*.test.js'"
   },
   "author": "",
   "license": "MIT",
