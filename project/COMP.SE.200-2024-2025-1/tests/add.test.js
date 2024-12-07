@@ -1,7 +1,7 @@
 // test/add.test.js
 
 import { expect } from 'chai';
-import add from 'project/COMP.SE.200-2024-2025-1/src/add.js';  // Make sure the import path is correct based on where your add function is located
+import add from '../src/add.js';  // Make sure the import path is correct based on where your add function is located
 
 describe('add function', () => {
   it('should add two numbers correctly', () => {
