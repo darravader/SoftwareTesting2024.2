@@ -19,7 +19,7 @@
     "all": true,                            
     "include": ["project/COMP.SE.200-2024-2025-1/src/**/*.js"],             
     "exclude": ["tests/**/*.test.js"],      
-    "coverageDir": "./coverage",           
+    "coverageDir": "./coverage/lcov-report",           
     "check-coverage": true,                
     "branches": 80,                      
     "lines": 80,                          
