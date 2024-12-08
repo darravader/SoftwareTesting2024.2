@@ -5,11 +5,8 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "test": "c8 mocha 'tests/**/*.test.js'"
+    "test": "c8 --check-coverage --statements 20 --branches 20 --functions 20 --lines 20 mocha 'tests/**/*.test.js'"
   },
-
-  "author": "",
-  "license": "MIT",
   "devDependencies": {
     "c8": "^10.1.2",
     "chai": "^4.5.0",
