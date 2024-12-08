@@ -42,7 +42,7 @@ jobs:
 
     - name: Display lcov.info content
       run: |
-        type project/COMP.SE.200-2024-2025-1/coverage/lcov-report/lcov.info
+        type project/COMP.SE.200-2024-2025-1/coverage/lcov.info
         
     - name: Upload coverage to Coveralls
       uses: coverallsapp/github-action@v2.3.4
