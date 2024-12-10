@@ -1,0 +1,15 @@
+{
+  "exclude": [
+    "src/.internal/**"
+  ],
+  "reporter": [
+    "lcov",
+    "text"
+  ],
+  "check-coverage": true,
+  "exclude-after-remap": true,
+  "statements": 0,
+  "branches": 0,
+  "functions": 0,
+  "lines": 0
+}
